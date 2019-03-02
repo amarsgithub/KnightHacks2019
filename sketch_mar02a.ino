@@ -46,56 +46,57 @@ void loop() {
   cm = (duration/2) / 29.1;     // Divide by 29.1 or multiply by 0.0343
   inches = (duration/2) / 74;   // Divide by 74 or multiply by 0.0135
   Serial.print("here ");
-
-    if (inches <= 1) 
-  {
-    myservo.attach(8);
-    myservo.write(1);
-    delay(10);
-    myservo.detach();
-    
+//
+//    if (inches <= 1) 
+//  {
 //    myservo.attach(8);
-//    delay(15);
-//    myservo.write(179);    
+//    myservo.write(1);
 //    delay(10);
-//    myservo.detach(); 
-//    delay(10);
-
-  Serial.print(inches);
-  Serial.print("in, ");
-  Serial.print(cm);
-  Serial.print("cm");
-  Serial.println();
-  }
-  else if (inches > 1 && inches <= 2) 
-  {
-    myservo.attach(8);
-    myservo.write(5);
-//    delay(700);
 //    myservo.detach();
+//    
+////    myservo.attach(8);
+////    delay(15);
+////    myservo.write(179);    
+////    delay(10);
+////    myservo.detach(); 
+////    delay(10);
+//
+//  Serial.print(inches);
+//  Serial.print("in, ");
+//  Serial.print(cm);
+//  Serial.print("cm");
+//  Serial.println();
+//  }
+//  else if (inches > 1 && inches <= 2) 
+//  {
 //    myservo.attach(8);
-//    delay(15);
-//    myservo.write(179);    
-    delay(7000);
-    myservo.detach(); 
-    delay(700);
+//    myservo.write(5);
+////    delay(700);
+////    myservo.detach();
+////    myservo.attach(8);
+////    delay(15);
+////    myservo.write(179);    
+//    delay(7000);
+//    myservo.detach(); 
+//    delay(700);
+//
+//  Serial.print(inches);
+//  Serial.print("in, ");
+//  Serial.print(cm);
+//  Serial.print("cm");
+//  Serial.println();
+//  }
 
-  Serial.print(inches);
-  Serial.print("in, ");
-  Serial.print(cm);
-  Serial.print("cm");
-  Serial.println();
-  }
-  else if (inches > 2 && inches <= 5) 
+  if (inches < 10) 
   {
     myservo.attach(8);
     myservo.write(15);
-    delay(1000);
+    delay(500*(inches/2));
     myservo.detach();
     myservo.attach(8);
 //    delay(15);
 //    myservo.write(179);    
-    delay(1000);
+    delay(500*(inches/2));
     myservo.detach(); 
     delay(1000);
 
