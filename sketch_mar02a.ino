@@ -49,10 +49,10 @@ void loop() {
 
     if (inches <= 1) 
   {
-//    myservo.attach(8);
+    myservo.attach(8);
     myservo.write(1);
-//    delay(10);
-//    myservo.detach();
+    delay(10);
+    myservo.detach();
     
 //    myservo.attach(8);
 //    delay(15);
@@ -67,16 +67,16 @@ void loop() {
   Serial.print("cm");
   Serial.println();
   }
-  if (inches <= 2) 
+  else if (inches > 1 && inches <= 2) 
   {
     myservo.attach(8);
-    myservo.write(1);
-    delay(700);
-    myservo.detach();
-    myservo.attach(8);
+    myservo.write(5);
+//    delay(700);
+//    myservo.detach();
+//    myservo.attach(8);
 //    delay(15);
-    myservo.write(179);    
-    delay(700);
+//    myservo.write(179);    
+    delay(7000);
     myservo.detach(); 
     delay(700);
 
@@ -86,15 +86,15 @@ void loop() {
   Serial.print("cm");
   Serial.println();
   }
-  else if (inches <= 5) 
+  else if (inches > 2 && inches <= 5) 
   {
     myservo.attach(8);
-    myservo.write(1);
+    myservo.write(15);
     delay(1000);
     myservo.detach();
     myservo.attach(8);
-    delay(15);
-    myservo.write(179);    
+//    delay(15);
+//    myservo.write(179);    
     delay(1000);
     myservo.detach(); 
     delay(1000);
@@ -108,22 +108,22 @@ void loop() {
 //  else 
 //  {
 //    myservo.attach(9);
-//    delay(1000);
-//    myservo.write(1);
-//    delay(1000);
-//    myservo.detach(); 
-//    delay(1000);
-//    myservo.write(179);
-//    delay(1000);     
+////    delay(1000);
+////    myservo.write(1);
+////    delay(1000);
+////    myservo.detach(); 
+////    delay(1000);
+////    myservo.write(179);
+////    delay(1000);     
 //    myservo.detach();
 //    delay(1000);
 //  }
   
-//  Serial.print(inches);
-//  Serial.print("in, ");
-//  Serial.print(cm);
-//  Serial.print("cm");
-//  Serial.println();
+  Serial.print(inches);
+  Serial.print("in, ");
+  Serial.print(cm);
+  Serial.print("cm");
+  Serial.println();
   
   delay(1);
 }
